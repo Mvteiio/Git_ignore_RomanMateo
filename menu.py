@@ -14,4 +14,4 @@ def crudAdministrador ():
     print ("1. Agregar usuario. ")
     print ("2. Ver usuarios. ")
     print ("3. Modificar un usuario. ")
-    print ("4. Eliminar un usuario. ")
+    

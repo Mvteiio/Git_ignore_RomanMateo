@@ -5,7 +5,7 @@
             "nombre": "Mateo Roman Camargo",
             "direccion": "Carrera 60 #1-111",
             "infoContacto": "316 2365 244",
-            "tipoCliente": "",
+            "tipoCliente": "Cliente Leal",
             "servicios": "",
             "yearInicio": 2000
         },
@@ -20,10 +20,10 @@
         },
         {
             "identificador": 3,
-            "nombre": "DSA",
-            "direccion": "FF",
-            "infoContacto": "DSF",
-            "tipoCliente": "Nuevo Cliente",
+            "nombre": "Vladimir Mustafa de Leon",
+            "direccion": "Altos de Cañaveral",
+            "infoContacto": "315 2876 299",
+            "tipoCliente": "Cliente Nuevo",
             "servicios": "Prepago",
             "yearInicio": 2025
         }

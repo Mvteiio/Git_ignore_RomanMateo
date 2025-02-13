@@ -20,7 +20,7 @@ eleccionAdministrador = int(input("Que deseas hacer?: "))
 match eleccionAdministrador:
     case 1:
             crudAdministrador()
-            eleccionCRUD = int(input("Que deseas hacer?: "))
+            eleccionCRUD = int(input("\nQue deseas hacer?: "))
             match eleccionCRUD:
                     case 1:
                         crearUsuario()
@@ -30,5 +30,9 @@ match eleccionAdministrador:
                       modificarUsuario()
                     case 4:
                       eliminarUsuario()
+    case 2:
+        asignarCategoria()
+
+
                         
                       

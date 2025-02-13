@@ -43,7 +43,7 @@ def verUsuarios ():
 def modificarUsuario():
     booleanito = True
     while booleanito == True:
-        idUsuario = int(input("Ingresa el ID del usuario que deseas modificar: "))
+        idUsuario = int(input("\nIngresa el ID del usuario que deseas modificar: "))
         for usuario in dicUsuarios['usuarios']:
             if usuario['identificador']==idUsuario:
                 eleccionModificar = input(f"\nVas a modificar a: {usuario['nombre']}?(S/N): ")
@@ -79,7 +79,7 @@ def modificarUsuario():
 def eliminarUsuario():
     booleanito = True
     while booleanito == True:
-        idUsuario = int(input("Ingresa el ID del usuario que deseas eliminar: "))
+        idUsuario = int(input("\nIngresa el ID del usuario que deseas eliminar: "))
         for usuario in dicUsuarios['usuarios']:
             if usuario['identificador']==idUsuario:
                 eleccionModificar = input(f"\nEstas seguro de eliminar a: {usuario['nombre']}?(S/N): ")
@@ -92,6 +92,36 @@ def eliminarUsuario():
                         break
                     case "N":
                         booleanito = True
+
+def asignarCategoria ():
+    idUsuario = int(input("\nIngresa el ID del usuario al que deseas asignar una categoria: "))
+    for usuario in dicUsuarios['usuarios']:
+        if usuario['identificador']==idUsuario:
+            
+            if (2025-usuario['yearInicio']) > 10:
+                usuario['tipoCliente']="Cliente Leal"
+                print(f"{usuario['nombre']}, lleva mas de 10 años con la compañia, es un cliente leal.")
+                print("Tipo de cliente guardado con exito")
+                guardarUsuariosJSON(dicUsuarios)
+
+            elif (2025-usuario['yearInicio']) < 5:
+                usuario['tipoCliente']="Cliente Nuevo"
+                print(f"{usuario['nombre']}, lleva menos de 5 años con la compañia, es un cliente nuevo.")
+                print("Tipo de cliente guardado con exito")
+                guardarUsuariosJSON(dicUsuarios)
+
+            elif (2025-usuario['yearInicio']) > 5 and (2025-usuario['yearInicio']) < 10:
+                usuario['tipoCliente']="Cliente Regular"
+                print(f"{usuario['nombre']}, lleva mas de 5 años con la compañia, pero no mas de 10, es un cliente regular.")
+                print("Tipo de cliente guardado con exito")
+                guardarUsuariosJSON(dicUsuarios)
+                
+
+               
+               
+               
+        
+
 
 
 
