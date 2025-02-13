@@ -1,0 +1,107 @@
+import json
+
+def abrirUsuariosJSON():
+    dicFinal={}
+    with open("./usuarios.json",'r') as openFile:
+        dicFinal=json.load(openFile)
+    return dicFinal
+
+def guardarUsuariosJSON(dic):
+    with open("./usuarios.json",'w') as outFile:
+        json.dump(dic,outFile)
+
+dicUsuarios = {}
+dicUsuarios = abrirUsuariosJSON()
+
+def crearUsuario ():
+    nombreUsuario = input("Ingresa el nombre completo del usuario: ")
+    direccionUsuario = input("Ingresa la direccion del usuario: ")
+    infoContacto = input("Escribe el numero de contacto del usuario: ")
+    print("\nLista de servicios")
+    print("1. Fibra optica. ")
+    print("2. Plan Pospago. ")
+    print("3. Prepago. ")
+    serviciosUsuario = (input("\nQué servicio va a adquirir el usuario (escribe el servicio como se muestra): "))
+    
+    nuevoUsuario = {
+        "nombre": nombreUsuario,
+        "direccion": direccionUsuario,
+        "infoContacto": infoContacto,
+        "tipoCliente": "Nuevo Cliente",
+        "servicios": serviciosUsuario,
+        "yearInicio": 2025
+    }
+
+    dicUsuarios['usuarios'].append(nuevoUsuario)
+    print("Usuario agregado con exito :). ")
+    guardarUsuariosJSON(dicUsuarios)
+
+def verUsuarios ():
+    for usuario in dicUsuarios['usuarios']:
+        print (f"Nombre: {usuario['nombre']} / Direccion: {usuario['direccion']} / Contacto: {usuario['infoContacto']} / Serivicio: {usuario['servicios']}") 
+
+def modificarUsuario():
+    booleanito = True
+    while booleanito == True:
+        idUsuario = int(input("Ingresa el ID del usuario que deseas modificar: "))
+        for usuario in dicUsuarios['usuarios']:
+            if usuario['identificador']==idUsuario:
+                eleccionModificar = input(f"\nVas a modificar a: {usuario['nombre']}?(S/N): ")
+                match eleccionModificar:
+                    case "S":
+                        nombreModificar = input("Escribe el nuevo nombre del usuario: ")
+                        direccionModificar = input("Escribe la nueva direccion del usuario: ")
+                        contactoModificar = input("Escribe el nuevo contacto del usuario: ")
+                        print("\nLista de servicios")
+                        print("1. Fibra optica. ")
+                        print("2. Plan Pospago. ")
+                        print("3. Prepago. ")
+                        serviciosModificar = (input("\nQué servicio va a adquirir el usuario (escribe el servicio como se muestra): "))
+
+                        nuevoUsuario = {
+                            "identificador": idUsuario,
+                            "nombre": nombreModificar,
+                            "direccion": direccionModificar,
+                            "infoContacto": contactoModificar,
+                            "tipoCliente": "Nuevo Cliente",
+                            "servicios": serviciosModificar,
+                            "yearInicio": 2025
+                        }   
+
+                        dicUsuarios['usuarios'][idUsuario-1]=(nuevoUsuario)
+                        print("Usuario modificado con exito. ")
+                        guardarUsuariosJSON(dicUsuarios)
+                        booleanito = False
+                        break
+                    case "N":
+                        booleanito = True
+
+def eliminarUsuario():
+    booleanito = True
+    while booleanito == True:
+        idUsuario = int(input("Ingresa el ID del usuario que deseas eliminar: "))
+        for usuario in dicUsuarios['usuarios']:
+            if usuario['identificador']==idUsuario:
+                eleccionModificar = input(f"\nEstas seguro de eliminar a: {usuario['nombre']}?(S/N): ")
+                match eleccionModificar:
+                    case "S":
+                        dicUsuarios['usuarios'].pop(idUsuario-1)
+                        print("Usuario eliminado con exito. ")
+                        guardarUsuariosJSON(dicUsuarios)
+                        booleanito = False
+                        break
+                    case "N":
+                        booleanito = True
+
+
+
+
+
+
+
+   
+   
+   
+   
+   
+    

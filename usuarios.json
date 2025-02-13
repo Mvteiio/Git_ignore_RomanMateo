@@ -1,0 +1,31 @@
+{
+    "usuarios": [
+        {
+            "identificador": 1,
+            "nombre": "Mateo Roman Camargo",
+            "direccion": "Carrera 60 #1-111",
+            "infoContacto": "316 2365 244",
+            "tipoCliente": "",
+            "servicios": "",
+            "yearInicio": 2000
+        },
+        {
+            "identificador": 2,
+            "nombre": "Valentina Perez Joya",
+            "direccion": "Calle 3 # 1-421",
+            "infoContacto": "316 6765 244",
+            "tipoCliente": "",
+            "servicios": "",
+            "yearInicio": 2016
+        },
+        {
+            "identificador": 3,
+            "nombre": "DSA",
+            "direccion": "FF",
+            "infoContacto": "DSF",
+            "tipoCliente": "Nuevo Cliente",
+            "servicios": "Prepago",
+            "yearInicio": 2025
+        }
+    ]
+}
