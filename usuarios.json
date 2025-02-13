@@ -6,7 +6,7 @@
             "direccion": "Carrera 60 #1-111",
             "infoContacto": "316 2365 244",
             "tipoCliente": "Cliente Leal",
-            "servicios": "",
+            "servicios": "Fibra Optica",
             "yearInicio": 2000
         },
         {
@@ -14,14 +14,14 @@
             "nombre": "Valentina Perez Joya",
             "direccion": "Calle 3 # 1-421",
             "infoContacto": "316 6765 244",
-            "tipoCliente": "",
-            "servicios": "",
+            "tipoCliente": "Cliente Regular",
+            "servicios": "Plan Pospago",
             "yearInicio": 2016
         },
         {
             "identificador": 3,
             "nombre": "Vladimir Mustafa de Leon",
-            "direccion": "Altos de Cañaveral",
+            "direccion": "Altos de Canaveral",
             "infoContacto": "315 2876 299",
             "tipoCliente": "Cliente Nuevo",
             "servicios": "Prepago",

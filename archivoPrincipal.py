@@ -1,6 +1,7 @@
 import json
 from menu import *
 from moduloUsuarios import *
+from moduloGestionServicio import *
 
 def abrirUsuariosJSON():
     dicFinal={}
@@ -32,6 +33,20 @@ match eleccionAdministrador:
                       eliminarUsuario()
     case 2:
         asignarCategoria()
+    case 3:
+        verServicioUsuario()
+    case 4:
+        crudGestionServicio()
+        eleccionCrudServicio = int(input("\nQue deseas hacer?: "))
+        match eleccionCrudServicio:
+            case 1:
+                agregarServicio()
+            case 2:
+                verServiciosActivos()
+            case 3: 
+                modificarServicio()
+            case 4:
+                eliminarServicio()
 
 
                         

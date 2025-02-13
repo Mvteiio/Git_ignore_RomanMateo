@@ -97,7 +97,7 @@ def asignarCategoria ():
     idUsuario = int(input("\nIngresa el ID del usuario al que deseas asignar una categoria: "))
     for usuario in dicUsuarios['usuarios']:
         if usuario['identificador']==idUsuario:
-            
+
             if (2025-usuario['yearInicio']) > 10:
                 usuario['tipoCliente']="Cliente Leal"
                 print(f"{usuario['nombre']}, lleva mas de 10 años con la compañia, es un cliente leal.")
@@ -115,6 +115,22 @@ def asignarCategoria ():
                 print(f"{usuario['nombre']}, lleva mas de 5 años con la compañia, pero no mas de 10, es un cliente regular.")
                 print("Tipo de cliente guardado con exito")
                 guardarUsuariosJSON(dicUsuarios)
+
+def verServicioUsuario ():
+    print ("\n1. Ver servicio de un usuario. ")
+    print ("2. Ver los servicios usados por todos los usuarios.")
+    eleccionVer = int(input("Que deseas hacer?: "))
+    match eleccionVer:
+        case 1: 
+            idUsuario = int(input("\nIngresa el ID del usuario del que quieres ver su servicio: "))
+            for usuario in dicUsuarios['usuarios']:
+                if usuario['identificador']==idUsuario:
+                    print (f"Nombre: {usuario['nombre']} / Servicio: {usuario['servicios']}")
+        case 2:
+            for usuario in dicUsuarios['usuarios']:
+                print (f"Nombre: {usuario['nombre']} / Servicio: {usuario['servicios']}")
+
+    
                 
 
                
