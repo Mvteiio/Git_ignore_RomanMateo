@@ -2,6 +2,7 @@ import json
 from menu import *
 from moduloUsuarios import *
 from moduloGestionServicio import *
+from moduloReportes import *
 
 def abrirUsuariosJSON():
     dicFinal={}
@@ -47,6 +48,15 @@ match eleccionAdministrador:
                 modificarServicio()
             case 4:
                 eliminarServicio()
+    case 5:
+        menuReportes()
+        eleccionReporte = int(input("\nQue deseas hacer?: "))
+        match eleccionReporte:
+            case 1:
+                informeServicios()
+                 
+
+
 
 
                         

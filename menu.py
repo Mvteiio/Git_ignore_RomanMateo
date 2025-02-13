@@ -6,6 +6,7 @@ def menuPrincipal ():
     print ("2. Asignar categoria de usuario. ")
     print ("3. Ver Servicios usados por usuario. ")
     print ("4. Modulo de gestion de servicios. ")
+    print ("5. Modulo de reportes. ")
 
 def crudAdministrador ():
     print ("\n/////////////////////////? ")
@@ -24,6 +25,14 @@ def crudGestionServicio ():
     print ("2. Ver servicios activos. ")
     print ("3. Modificar un servicio. ")
     print ("4. Eliminar un servicio. ")
+
+def menuReportes():
+    print ("\n/////////////////////////? ")
+    print ("// MODULO DE REPORTES  //? ")
+    print ("/////////////////////////? ")
+    print ("1. Generar informe sobre servicios que se ofrecen. ")
+    print ("2. Servicios mas populares. ")
+    print ("3. Tiempo de usuario con servicio. ")
 
 
     
